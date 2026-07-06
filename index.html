@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0F172A" />
+    <title>2 года вместе</title>
+    <meta
+      name="description"
+      content="Романтический сайт-подарок на вторую годовщину отношений"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/animations.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero section" id="top">
+        <div class="hero__particles" id="particles"></div>
+        <nav class="nav glass-card">
+          <a href="#history">История</a>
+          <a href="#gallery">Галерея</a>
+          <a href="#reasons">Причины</a>
+          <a href="#heart">Сердце</a>
+          <a href="#music">Песня</a>
+        </nav>
+
+        <div class="hero__content reveal">
+          <p class="eyebrow">Вторая годовщина</p>
+          <h1>Уже 2 года вместе ❤️</h1>
+          <p class="hero__copy">
+            Каждая секунда рядом с тобой — как маленький повод для любви.
+          </p>
+
+          <div class="counter-grid" aria-label="Счетчик времени вместе">
+            <div class="counter-card glass-card">
+              <span class="counter-value" id="counterYears">00</span>
+              <span class="counter-label">лет</span>
+            </div>
+            <div class="counter-card glass-card">
+              <span class="counter-value" id="counterMonths">00</span>
+              <span class="counter-label">месяцев</span>
+            </div>
+            <div class="counter-card glass-card">
+              <span class="counter-value" id="counterDays">00</span>
+              <span class="counter-label">дней</span>
+            </div>
+            <div class="counter-card glass-card">
+              <span class="counter-value" id="counterHours">00</span>
+              <span class="counter-label">часов</span>
+            </div>
+            <div class="counter-card glass-card">
+              <span class="counter-value" id="counterMinutes">00</span>
+              <span class="counter-label">минут</span>
+            </div>
+            <div class="counter-card glass-card">
+              <span class="counter-value" id="counterSeconds">00</span>
+              <span class="counter-label">секунд</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section" id="history">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Наша история</p>
+            <h2>Каждый шаг — как нежный свет.</h2>
+          </div>
+          <div class="timeline" id="timeline"></div>
+        </section>
+
+        <section class="section" id="gallery">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Галерея</p>
+            <h2>Память в мягком свете.</h2>
+          </div>
+          <div class="gallery-grid" id="galleryGrid"></div>
+        </section>
+
+        <section class="section" id="reasons">
+          <div class="section-heading reveal">
+            <p class="eyebrow">11 причин</p>
+            <h2>Почему я тебя люблю.</h2>
+          </div>
+          <div class="reasons-grid" id="reasonsGrid"></div>
+          <div class="section-actions reveal">
+            <button class="ghost-button" id="showMoreReasons">Показать еще</button>
+          </div>
+        </section>
+
+        <section class="section" id="heart">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Интерактивное сердце</p>
+            <h2>Нажми и узнай, что я хочу сказать.</h2>
+          </div>
+          <div class="heart-stage reveal">
+            <button class="heart-button" id="heartButton" aria-label="Открыть признание">
+              <span class="heart-button__core">❤</span>
+            </button>
+            <div class="heart-message glass-card" id="heartMessage">
+              Нажми на сердце — и я открою тебе нежное признание.
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="music">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Музыкальный раздел</p>
+            <h2>Наше маленькое звучание любви.</h2>
+          </div>
+          <div class="music-card glass-card reveal">
+            <button class="primary-button" id="musicToggle">Включить нашу песню</button>
+            <button class="mini-button" id="collapseMusic">Свернуть</button>
+            <div class="music-player" id="musicPlayer">
+              <p id="musicLabel">Нежный саундтрек для наших воспоминаний.</p>
+              <div class="wave-bars" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+          <audio id="audioTrack" preload="metadata"></audio>
+        </section>
+
+        <section class="section final-section" id="final">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Финал</p>
+            <h2>Спасибо тебе за эти невероятные два года.</h2>
+          </div>
+          <div class="final-card glass-card reveal">
+            <p>
+              Это только начало нашей истории.<br />
+              И я с радостью пройду с тобой следующий круг света.
+            </p>
+            <button class="primary-button" id="finalButton">Продолжить</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Закрыть">×</button>
+      <img id="lightboxImage" src="" alt="" />
+    </div>
+
+    <div class="overlay" id="finalOverlay" aria-hidden="true">
+      <div class="overlay__content">
+        <p class="overlay__step" id="overlayStep">Year 3...</p>
+        <p class="overlay__message" id="overlayMessage">Loading...</p>
+        <div class="overlay__heart" id="overlayHeart">❤</div>
+      </div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
