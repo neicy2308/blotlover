@@ -22,13 +22,20 @@
     <div class="page-shell">
       <header class="hero section" id="top">
         <div class="hero__particles" id="particles"></div>
-        <nav class="nav glass-card">
-          <a href="#history">История</a>
-          <a href="#gallery">Галерея</a>
-          <a href="#reasons">Причины</a>
-          <a href="#heart">Сердце</a>
-          <a href="#music">Песня</a>
-        </nav>
+        <div class="nav-shell">
+          <button class="nav-toggle glass-card" id="navToggle" aria-label="Открыть меню" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="nav glass-card" id="mainNav">
+            <a href="#history">История</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#reasons">Причины</a>
+            <a href="#heart">Сердце</a>
+            <a href="#music">Песня</a>
+          </nav>
+        </div>
 
         <div class="hero__content reveal">
           <p class="eyebrow">Вторая годовщина</p>

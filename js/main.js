@@ -5,6 +5,7 @@ import { initReasons } from './reasons.js';
 import { initHeart } from './heart.js';
 import { initMusic } from './music.js';
 import { initFinal } from './final.js';
+import { initNav } from './nav.js';
 
 // Базовая инициализация всего приложения.
 const initRevealAnimations = () => {
@@ -106,6 +107,7 @@ const initApp = () => {
   initHeart();
   initMusic();
   initFinal();
+  initNav();
   initRevealAnimations();
   initParticles();
   initParallax();
